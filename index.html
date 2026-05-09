@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catmoon — Accesorios Alternativos para Almas Únicas</title>
+    <meta name="description" content="Catmoon: accesorios alternativos donde la dulzura del kawaii se encuentra con el misterio de la noche. Tienda online y física.">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Space+Grotesk:wght@700&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#e7bbc6",
+                        "surface-container-lowest": "#100d0e",
+                        "inverse-surface": "#e9e0e1",
+                        "surface-variant": "#383434",
+                        "tertiary-container": "#dcdddd",
+                        "on-secondary": "#303030",
+                        "on-secondary-container": "#b5b5b5",
+                        "on-primary-fixed-variant": "#5e3e47",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#5f6161",
+                        "surface-container-highest": "#383434",
+                        "error-container": "#93000a",
+                        "surface-container": "#221f1f",
+                        "primary": "#fff8f8",
+                        "on-primary-container": "#7a5761",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e9e0e1",
+                        "surface-dim": "#161313",
+                        "secondary-container": "#474747",
+                        "primary-fixed": "#ffd9e2",
+                        "surface-container-high": "#2d292a",
+                        "on-primary": "#452830",
+                        "on-error": "#690005",
+                        "on-background": "#e9e0e1",
+                        "surface": "#161313",
+                        "surface-bright": "#3c3839",
+                        "primary-container": "#ffd1dc",
+                        "tertiary": "#f9f9f9",
+                        "surface-container-low": "#1e1b1b",
+                        "inverse-primary": "#78555e",
+                        "outline-variant": "#4f4446",
+                        "outline": "#9b8d90",
+                        "background": "#050505",
+                        "on-surface-variant": "#d3c3c5",
+                        "on-tertiary": "#2f3131",
+                        "secondary": "#c6c6c6",
+                        "surface-tint": "#e7bbc6",
+                        "inverse-on-surface": "#332f30"
+                    },
+                    borderRadius: { DEFAULT: "0px", lg: "0px", xl: "0px", full: "9999px" },
+                    spacing: { md: "16px", sm: "8px", lg: "24px", gutter: "20px", unit: "4px", xs: "4px", "container-max": "1200px", xl: "48px" },
+                    fontFamily: {
+                        "headline-lg": ["Epilogue"],
+                        "label-caps": ["Space Grotesk"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-md": ["Epilogue"],
+                        "body-sm": ["Be Vietnam Pro"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+                        "body-sm": ["14px", { lineHeight: "1.5", fontWeight: "400" }]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- AOS Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#050505] text-on-background font-body-sm min-h-screen relative overflow-x-hidden">
+
+    <!-- Scanline overlay -->
+    <div class="scanline-overlay"></div>
+
+    <!-- Floating particles -->
+    <div id="particles-container" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- TopAppBar -->
+    <header id="main-header" class="fixed top-0 z-50 w-full flex justify-between items-center px-6 py-3 bg-[#050505]/95 backdrop-blur-sm border-b-4 border-double border-[#FFD1DC] shadow-[0_4px_0_#FFD1DC] transition-transform duration-300">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[#FFD1DC] drop-shadow-glow moon-icon" style="font-variation-settings: 'FILL' 1;">nightlight_round</span>
+            <h1 class="font-headline-md text-[#FFD1DC] tracking-tighter uppercase italic font-black drop-shadow-[0_0_8px_rgba(255,209,220,0.8)] text-2xl glitch-text" data-text="Catmoon">Catmoon</h1>
+        </div>
+
+    </header>
+
+    <main class="relative z-10 pt-24 pb-12 px-4 flex flex-col gap-10 max-w-xl mx-auto">
+
+        <!-- Hero Window -->
+        <section class="win95-border flex flex-col" data-aos="fade-up" data-aos-duration="800">
+            <div class="win95-titlebar relative overflow-hidden">
+                <div class="absolute inset-0 leopard-print"></div>
+                <div class="flex items-center gap-2 z-10">
+                    <span class="text-[10px] font-black uppercase tracking-widest flex items-center gap-1">
+                        <span class="text-black font-bold">welcome.exe</span>
+                    </span>
+                </div>
+                <div class="flex gap-1 z-10">
+                    <div class="win95-ctrl-btn">_</div>
+                    <div class="win95-ctrl-btn">□</div>
+                    <div class="win95-ctrl-btn win95-close">X</div>
+                </div>
+            </div>
+            <div class="window-content p-lg overflow-hidden">
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 mb-sm" data-aos="fade-right" data-aos-delay="200">
+                        <span class="material-symbols-outlined text-primary-fixed-dim sparkle-spin" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        <span class="font-label-caps uppercase tracking-widest text-[#FFD1DC]">Bienvenidos a Catmoon</span>
+                        <span class="material-symbols-outlined text-primary-fixed-dim sparkle-spin" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    </div>
+                    <h2 class="font-headline-lg text-white mb-md leading-none italic typewriter" data-aos="fade-up" data-aos-delay="400">El lado cute de la oscuridad</h2>
+                    <p class="font-body-lg text-[#FFD1DC] mb-lg font-bold" data-aos="fade-up" data-aos-delay="600">Accesorios kawaii con alma gótica. Piezas únicas que brillan bajo la luz de la luna para quienes se atreven a ser diferentes.</p>
+                </div>
+                <div class="absolute -bottom-8 -right-8 opacity-10 transform rotate-12 floating">
+                    <span class="material-symbols-outlined text-[150px] text-[#FFD1DC]">pets</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="pearl-divider" data-aos="zoom-in" data-aos-duration="600"></div>
+
+        <!-- Social Media Window -->
+        <section class="win95-border flex flex-col" data-aos="fade-up" data-aos-duration="800">
+            <div class="win95-titlebar relative overflow-hidden">
+                <div class="absolute inset-0 leopard-print"></div>
+                <div class="flex items-center gap-2 z-10">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-black">social.exe</span>
+                </div>
+                <div class="flex gap-1 z-10">
+                    <div class="win95-ctrl-btn">_</div>
+                    <div class="win95-ctrl-btn">□</div>
+                    <div class="win95-ctrl-btn win95-close">X</div>
+                </div>
+            </div>
+            <div class="window-content p-lg flex flex-col gap-lg">
+                <div class="text-center" data-aos="fade-down" data-aos-delay="200">
+                    <h3 class="font-headline-md text-[#FFD1DC] uppercase tracking-tighter italic">Únete a Nuestro Aquelarre</h3>
+                    <p class="font-body-sm text-on-surface-variant font-bold">Mantente extraña con nosotras en redes sociales</p>
+                </div>
+                <div class="grid grid-cols-2 gap-md">
+                    <a id="link-instagram" class="social-card bg-black h-24 border-2 border-[#FFD1DC] flex flex-col items-center justify-center gap-2 hover:bg-surface-container transition-all group active:translate-x-1 active:translate-y-1 shadow-[4px_4px_0_#FFD1DC]" href="https://www.instagram.com/cat_moon666?igsh=MWRic256ZXp0MDNudw==" target="_blank" rel="noopener noreferrer" data-aos="flip-left" data-aos-delay="100">
+                        <span class="material-symbols-outlined text-[#FFD1DC] group-hover:scale-110 transition-transform">favorite</span>
+                        <span class="font-label-caps text-white">Instagram</span>
+                    </a>
+                    <a id="link-tiktok" class="social-card bg-black h-24 border-2 border-[#FFD1DC] flex flex-col items-center justify-center gap-2 hover:bg-surface-container transition-all group active:translate-x-1 active:translate-y-1 shadow-[4px_4px_0_#FFD1DC]" href="https://www.tiktok.com/@666catmoon666?_r=1&_t=ZS-96DzhLf2wOm" target="_blank" rel="noopener noreferrer" data-aos="flip-right" data-aos-delay="200">
+                        <span class="material-symbols-outlined text-[#FFD1DC] group-hover:scale-110 transition-transform">music_note</span>
+                        <span class="font-label-caps text-white">TikTok</span>
+                    </a>
+                    <a id="link-facebook" class="social-card bg-black h-24 border-2 border-[#FFD1DC] flex flex-col items-center justify-center gap-2 hover:bg-surface-container transition-all group active:translate-x-1 active:translate-y-1 shadow-[4px_4px_0_#FFD1DC]" href="https://www.facebook.com/share/14aaCnYDMXF/" target="_blank" rel="noopener noreferrer" data-aos="flip-left" data-aos-delay="300">
+                        <span class="material-symbols-outlined text-[#FFD1DC] group-hover:scale-110 transition-transform">public</span>
+                        <span class="font-label-caps text-white">Facebook</span>
+                    </a>
+                    <a id="link-whatsapp" class="social-card bg-black h-24 border-2 border-[#FFD1DC] flex flex-col items-center justify-center gap-2 hover:bg-surface-container transition-all group active:translate-x-1 active:translate-y-1 shadow-[4px_4px_0_#FFD1DC]" href="https://api.whatsapp.com/send/?phone=%2B59174673705&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" data-aos="flip-right" data-aos-delay="400">
+                        <span class="material-symbols-outlined text-[#FFD1DC] group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+                        <span class="font-label-caps text-white">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locations Window -->
+        <section class="win95-border flex flex-col" data-aos="fade-up" data-aos-duration="800">
+            <div class="win95-titlebar relative overflow-hidden">
+                <div class="absolute inset-0 leopard-print"></div>
+                <div class="flex items-center gap-2 z-10">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-black">locations.exe</span>
+                </div>
+                <div class="flex gap-1 z-10">
+                    <div class="win95-ctrl-btn">_</div>
+                    <div class="win95-ctrl-btn">□</div>
+                    <div class="win95-ctrl-btn win95-close">X</div>
+                </div>
+            </div>
+            <div class="window-content p-lg flex flex-col gap-lg">
+                <h3 class="font-headline-md text-[#FFD1DC] text-center uppercase italic" data-aos="zoom-in">Visita Nuestros Santuarios</h3>
+                <div class="flex flex-col gap-8">
+                    <!-- Location Card 1 -->
+                    <div class="location-card bg-black p-lg border-2 border-double border-[#FFD1DC] relative shadow-[4px_4px_0_#7a5761]" data-aos="fade-right" data-aos-delay="200">
+                        <div class="absolute -top-3 -right-3 heart-pulse">
+                            <span class="material-symbols-outlined text-[#FFD1DC] text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </div>
+                        <h4 class="font-headline-md text-xl mb-sm italic text-white underline decoration-[#FFD1DC]">Tienda Física</h4>
+                        <div class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-[#FFD1DC] mt-1" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                            <p class="font-body-sm text-[#FFD1DC]">Centro Comercial Av.Brasil Pasillo 17 Puesto 450</p>
+                        </div>
+                        <div class="mt-md flex flex-col gap-sm">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="material-symbols-outlined text-[#FFD1DC] text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                                <span class="font-body-sm italic text-white font-bold">Lunes a Viernes: 10am - 8pm</span>
+                            </div>
+                            <a id="btn-maps-1" class="flex items-center gap-2 bg-[#FFD1DC] text-black w-fit px-2 py-1 font-label-caps text-xs border border-white hover:brightness-110 transition-all" href="https://maps.app.goo.gl/fgREFyVVEAoskwNLA" target="_blank" rel="noopener noreferrer">
+                                <span class="material-symbols-outlined text-sm">map</span>
+                                OPEN_MAPS.EXE
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Location Card 2 -->
+                    <div class="location-card bg-black p-lg border-2 border-double border-[#FFD1DC] relative shadow-[4px_4px_0_#7a5761]" data-aos="fade-left" data-aos-delay="400">
+                        <div class="absolute -top-3 -right-3 heart-pulse">
+                            <span class="material-symbols-outlined text-[#FFD1DC] text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </div>
+                        <h4 class="font-headline-md text-xl mb-0 italic text-white underline decoration-[#FFD1DC]">Punto de Entrega</h4>
+                        <p class="font-body-sm text-on-surface-variant mb-sm">Casa de la dueña</p>
+                        <div class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-[#FFD1DC] mt-1" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                            <p class="font-body-sm text-[#FFD1DC]">Z/Pampa de la Isla - B/San Antonio - C/Bolivar</p>
+                        </div>
+                        <div class="mt-md flex flex-col gap-sm">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="material-symbols-outlined text-[#FFD1DC] text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                                <span class="font-body-sm italic text-white font-bold">Fines de semana: 11am - 9pm</span>
+                            </div>
+                            <a id="btn-maps-2" class="flex items-center gap-2 bg-[#FFD1DC] text-black w-fit px-2 py-1 font-label-caps text-xs border border-white hover:brightness-110 transition-all" href="https://maps.app.goo.gl/3dqTgvBkZJUMGmFs5" target="_blank" rel="noopener noreferrer">
+                                <span class="material-symbols-outlined text-sm">map</span>
+                                OPEN_MAPS.EXE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 flex flex-col items-center gap-8 w-full px-8 py-12 bg-black border-t-4 border-[#FFD1DC] shadow-[0_-4px_0_#7a5761]">
+        <div class="flex flex-col items-center gap-4" data-aos="fade-up">
+            <h2 class="text-2xl font-black text-[#FFD1DC] font-headline-md uppercase italic tracking-widest drop-shadow-glow">Catmoon</h2>
+        </div>
+        <div class="flex flex-col items-center gap-2 text-center">
+            <div class="flex items-center gap-2 text-[#FFD1DC]">
+                <span class="pixel-heart"></span>
+                <p class="font-headline-md text-sm italic font-black uppercase">MANTENTE EXTRAÑA.</p>
+                <span class="pixel-heart"></span>
+            </div>
+            <p class="font-['Epilogue'] text-[10px] uppercase tracking-widest font-bold text-pink-300/60 mt-4">
+                © <span id="current-year">2026</span> CATMOON ACCESSORIES.
+            </p>
+        </div>
+
+    </footer>
+
+    <div id="floating-cta" class="fixed bottom-4 right-4 z-[100] animate-bounce cursor-pointer hover:scale-110 transition-transform">
+        <img src="cat-wave-transparent.png" alt="Gatito Catmoon" class="w-16 h-16 object-contain drop-shadow-[0_0_2px_#ffffff] drop-shadow-[0_0_4px_#ffffff]">
+    </div>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- Main JS -->
+    <script src="main.js"></script>
+</body>
+</html>

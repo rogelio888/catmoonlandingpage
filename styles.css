@@ -1,0 +1,301 @@
+/* ============================================
+   CATMOON — Custom Styles
+   Win95 / Kawaii-Gothic Aesthetic
+   ============================================ */
+
+/* --- Win95 Window Borders --- */
+.win95-border {
+    border: 4px solid;
+    border-image-source: linear-gradient(135deg, #fff 0%, #FFD1DC 50%, #7a5761 100%);
+    border-image-slice: 1;
+    box-shadow: 4px 4px 0px #FFD1DC;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.win95-border:hover {
+    box-shadow: 6px 6px 0px #FFD1DC, 0 0 20px rgba(255, 209, 220, 0.15);
+    transform: translateY(-2px);
+}
+
+/* --- Win95 Titlebar --- */
+.win95-titlebar {
+    background: linear-gradient(90deg, #FFD1DC 0%, #7a5761 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* --- Win95 Control Buttons (decorative) --- */
+.win95-ctrl-btn {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+.win95-ctrl-btn.win95-close {
+    background: #FFD1DC;
+    font-weight: 900;
+}
+
+/* --- Leopard Print Pattern --- */
+.leopard-print {
+    background-image: radial-gradient(circle, #000 20%, transparent 20%), radial-gradient(circle, #000 20%, transparent 20%);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    opacity: 0.1;
+}
+
+/* --- Window Content --- */
+.window-content {
+    background-color: #0a0a0a;
+    position: relative;
+}
+
+/* --- Pearl Divider --- */
+.pearl-divider {
+    height: 12px;
+    background-image: radial-gradient(circle, #FFD1DC 4px, transparent 5px);
+    background-size: 20px 12px;
+    background-repeat: repeat-x;
+    opacity: 0.5;
+}
+
+/* --- Pixel Heart --- */
+.pixel-heart::before {
+    content: '❤';
+    font-family: monospace;
+    color: #FFD1DC;
+    filter: drop-shadow(2px 2px 0px #000);
+}
+
+/* --- Glow Effect --- */
+.drop-shadow-glow {
+    filter: drop-shadow(0 0 8px rgba(255, 209, 220, 0.8));
+}
+
+/* --- Body BG --- */
+body {
+    background-color: #050505;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* Scanline CRT overlay */
+.scanline-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 209, 220, 0.015) 2px,
+        rgba(255, 209, 220, 0.015) 4px
+    );
+}
+
+/* Moon icon rotation */
+.moon-icon {
+    animation: moonGlow 3s ease-in-out infinite;
+}
+@keyframes moonGlow {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 209, 220, 0.6)); transform: rotate(0deg); }
+    50% { filter: drop-shadow(0 0 14px rgba(255, 209, 220, 1)); transform: rotate(15deg); }
+}
+
+/* Sparkle spin */
+.sparkle-spin {
+    animation: sparkleSpin 4s linear infinite;
+}
+@keyframes sparkleSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.2); }
+    50% { transform: rotate(180deg) scale(1); }
+    75% { transform: rotate(270deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Floating animation */
+.floating {
+    animation: floating 4s ease-in-out infinite;
+}
+@keyframes floating {
+    0%, 100% { transform: translateY(0) rotate(12deg); }
+    50% { transform: translateY(-12px) rotate(12deg); }
+}
+
+/* Heart pulse */
+.heart-pulse {
+    animation: heartPulse 1.5s ease-in-out infinite;
+}
+@keyframes heartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+}
+
+/* Terminal blink */
+.terminal-blink {
+    animation: termBlink 1.2s step-end infinite;
+}
+@keyframes termBlink {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.1; }
+}
+
+/* Glitch text effect */
+.glitch-text {
+    position: relative;
+}
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.glitch-text:hover::before {
+    animation: glitch1 0.3s ease-in-out;
+    color: #ff6b9d;
+    opacity: 0.7;
+    clip-path: inset(20% 0 30% 0);
+}
+.glitch-text:hover::after {
+    animation: glitch2 0.3s ease-in-out;
+    color: #7a5761;
+    opacity: 0.7;
+    clip-path: inset(50% 0 10% 0);
+}
+@keyframes glitch1 {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 2px); }
+    40% { transform: translate(3px, -2px); }
+    60% { transform: translate(-2px, 1px); }
+    80% { transform: translate(2px, -1px); }
+    100% { transform: translate(0); }
+}
+@keyframes glitch2 {
+    0% { transform: translate(0); }
+    20% { transform: translate(3px, -2px); }
+    40% { transform: translate(-3px, 2px); }
+    60% { transform: translate(2px, -1px); }
+    80% { transform: translate(-2px, 1px); }
+    100% { transform: translate(0); }
+}
+
+/* Social card hover glow */
+.social-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.social-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 209, 220, 0.08) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.social-card:hover::after {
+    opacity: 1;
+}
+
+/* Location card shimmer */
+.location-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.location-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 209, 220, 0.06), transparent);
+    transition: left 0.6s ease;
+}
+.location-card:hover::before {
+    left: 150%;
+}
+.location-card:hover {
+    border-color: #ff9bb5;
+    box-shadow: 4px 4px 0 #FFD1DC;
+}
+
+/* Footer links underline animation */
+.footer-link {
+    position: relative;
+}
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #FFD1DC;
+    transition: width 0.3s ease;
+}
+.footer-link:hover::after {
+    width: 100%;
+}
+
+/* Floating particle */
+.particle {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: #FFD1DC;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    animation: particleFloat linear infinite;
+}
+@keyframes particleFloat {
+    0% { opacity: 0; transform: translateY(100vh) scale(0); }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { opacity: 0; transform: translateY(-10vh) scale(1); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+::-webkit-scrollbar-thumb {
+    background: #7a5761;
+    border: 2px solid #FFD1DC;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FFD1DC;
+}
+
+/* Selection color */
+::selection {
+    background: #FFD1DC;
+    color: #050505;
+}
